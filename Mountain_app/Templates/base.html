@@ -1,0 +1,158 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Travelr</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+<style>
+  h1 {
+    font-family: 'Poppins', sans-serif, 'arial';
+    font-weight: 600;
+    font-size: 73px;
+    color: white;
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+</style>
+</head>
+<body id="top">
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear"> 
+    <div class="fl_left">
+      <ul class="nospace inline pushright">
+        <li><i class="fa fa-phone"></i> +91 (958) 859 5861</li>
+        <li><i class="fa fa-envelope-o"></i> okeyvikas@gmail.com</li>
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a class="faicon-rss" href="#"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+<!-- ################################################################################################ -->
+<img id="a2" style="width: 24pc; height:8pc; margin-left:200px" src="{% static 'images/demo/backgrounds/ttt.png' %}" alt="" srcset="">
+<div id="logo" class="fl_left">
+      <header id="header" class="hoc clear"> 
+      
+      <h1 id="logo" class="fl_left" style="color:forestgreen;" ><a href="#">Travel Diaries</a></h1>
+    </div>
+    <div id="quickinfo" class="fl_right">
+      <ul class="nospace inline">
+        <li><strong>Contact Us:</strong><br>
+          +91 (958) 859 5861</li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <nav id="mainav" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+      <li ><a href="{% url 'home' %}">Home</a></li>
+      <li><a class="drop" href="">Services</a>
+        <ul>
+          <li><a href="{% url 'ef' %}">Daily Chart</a></li>
+        </ul>
+      </li>
+    </li>
+    <li><a href="{% url 'ij' %}">Weather</a></li>
+    <li><a href="{% url 'gallary' %}">Gallery</a></li>
+    <li><a href="{% url 'help' %}">Help</a></li>
+    <li  class="active"><a style="color: rgb(155, 155, 247); font-family:Georgia, 'Times New Roman', Times, serif" href="{% url 'register_guide' %}">Register Guide</a></li>
+    <li  class="active"><STrong><a  style="color: rgb(250, 179, 86);" href="{% url 'yatra' %}">YATARA</a></STrong></li>
+      <li><a href="">Profile</a></li>
+
+      <li  class="active"><a style="color: red; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"  href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+    <a  style="float: right;" href="">{{user}}</a>
+
+    <!-- ################################################################################################ -->
+  </nav>
+</div>
+
+{% block content %}
+
+
+
+
+
+
+{% endblock  %}
+<div class="wrapper row4">
+    <footer id="footer" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div class="one_third first">
+        <h6 class="title">Address </h6>
+        <ul class="nospace linklist contact">
+          <li><i class="fa fa-map-marker"></i>
+            <address>
+            Shahbad Markanda  &amp; Kurukshtra,136135
+            </address>
+          </li>
+          <li><i class="fa fa-phone"></i> +91 (958) 859 5861<br>
+            </li>
+          <li><i class="fa fa-envelope-o"></i> okeyvikas@gmail.com</li>
+        </ul>
+      </div>
+      <div class="one_third" hidden>
+        <h6 class="title" ></h6>
+        <ul class="nospace linklist" hidden>
+        </ul>
+      </div>
+      <div class="one_third">
+        <h6 class="title">Contact Us</h6>        <form method="post" action="#">
+          <fieldset>
+            <h3>Newsletter :</h3>
+            <input class="btmspace-15" type="text" value="" placeholder="Name">
+            <input class="btmspace-15" type="text" value="" placeholder="Email">
+            <button type="submit" value="submit">Submit</button>
+          </fieldset>
+        </form>
+      </div>
+      <!-- ################################################################################################ -->
+    </footer>
+  </div>
+
+  <div class="wrapper row5">
+    <div id="copyright" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <p class="fl_left">Copyright &copy; 2023 - All Rights Reserved <a href="#"></a></p>
+      <p class="fl_right"><a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">Vikas Kumar</a></p>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+  <!-- JAVASCRIPTS -->
+  <script src="{% static '/layout/scripts/jquery.min.js' %}"></script>
+  <script src="{% static '/layout/scripts/jquery.backtotop.js' %}"></script>
+  <script src="{% static '/layout/scripts/jquery.mobilemenu.js' %}"></script>
+  <!-- IE9 Placeholder Support -->
+  <script src="{% static '/layout/scripts/jquery.placeholder.min.js' %}"></script>
+  <!-- / IE9 Placeholder Support -->
+  </body>
+  </html>

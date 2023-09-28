@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<main>
+  
+  <div class="container-Fluid" style="margin-left: 10px; margin-top:20px">
+    <div class="row">
+      <div class="col-lg-2" >
+          {% for i in data %}
+          <a style="color: white;" href="">
+
+            <h3 style="font-style: oblique;" class="card-header">{{i.pic_title}}</h3>
+            
+            
+            <img src={{i.title_pic.url}} style="width: 10pc; height:10pc; border-radius:15px" alt="image">
+          </a>
+                
+              <p>{{i.title_date}}</p>
+
+          
+              
+              {% endfor %}
+          </div>
+      </div>
+      
+      <div class="content">
+        
+        <div id="g">
+          <figure>
+            <strong><figcaption style="color: white;" >Gallery Description</figcaption></strong>
+            <p style="color: cadetblue;" >Our Website Contribute Verious schems And Do Best for our side take a look </p>
+          </figure>
+        </div>
+    </div>
+    </main>
+    <!-- ################################################################################################ -->
+    <nav class="pagination">
+      <ul>
+        <li><a href="#">&laquo; Previous</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">Next &raquo;</a></li>
+      </ul>
+    </nav>
+    {% endblock%}
